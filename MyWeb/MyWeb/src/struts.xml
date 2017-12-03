@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+ <package name="MyWeb" extends="struts-default">
+ <!-- 前台评论功能 -->
+		<action name="Comment" class="com.demo.action.CommentAction" method="serachByTitle">
+			<result name="success">success.jsp</result>
+			<result name="fault">error.jsp</result>
+		</action>
+		
+		<action name="InsertComment" class="com.demo.action.CommentAction" method="insert">
+			<result name="success">success.jsp</result>
+		</action>
+		<action name="DeleteComment" class="com.demo.action.CommentAction" method="delete">
+			<result name="success">success.jsp</result>
+			<result name="fault">error.jsp</result>
+		</action>
+		<action name="UpdateComment" class="com.demo.action.CommentAction" method="update">
+			<result name="success">success.jsp</result>
+			<result name="fault">/error.jsp</result>
+		</action>
+<!-- 前台项目更新功能 -->	
+        <action name="InsertCampaignUpdate" class="com.demo.action.CampaignUpdateAction" method="insert">
+			<result name="success">success.jsp</result>
+			<result name="fault">/error.jsp</result>
+		</action>
+		<action name="DeleteCampaignUpdate" class="com.demo.action.CampaignUpdateAction" method="delete">
+			<result name="success">success.jsp</result>
+			<result name="fault">/error.jsp</result>
+		</action>
+</package>
+</struts>    
